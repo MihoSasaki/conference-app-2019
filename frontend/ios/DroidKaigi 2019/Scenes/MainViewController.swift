@@ -78,13 +78,12 @@ extension MainViewController: DrawerViewControllerDelegate {
         case .floorMap:
             let floorMap = FloorMapViewController.instantiateFromStoryboard()
             navigationController?.pushViewController(floorMap, animated: false)
+        case .announce:
+            let announce = AnnouncementsViewController.instantiateFromStoryboard()
+            navigationController?.pushViewController(announce, animated: false)
         default:
             break
         }
         closeSlide()
-    }
-    @objc func notificationsButtonTapped(_ sender: Any?) {
-        let notifications = AnnouncementsViewController.instantiateFromStoryboard()
-        show(notifications, sender: nil)
     }
 }
